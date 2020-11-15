@@ -1,0 +1,39 @@
+﻿.content-container-fullscreen {
+    transition: margin-left linear .25s; /* should match .content transition */
+}
+
+.app-choice {
+    width: 200px;
+    height: 398px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 4px;
+    padding: 4px;
+    display: inline-table;
+    cursor: pointer;
+    border: 2px solid #41471b;
+}
+    .app-choice:hover {
+        border: 2px solid #5f643e;
+    }
+
+.app-choice-title {
+    background-color: #41471b;
+    opacity: 0.9;
+    padding: 5px;
+    width: 200px;
+    font-size: large;
+    color: #ffffff;
+}
+
+#chargen {
+    background-image:url(../Images/app_chargen.png);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    color: white;
+}

@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/WebTools-MC/config
+/.vscode
+/WebTools/bin
+/WebTools/dist
+/WebTools/node_modules
+/WebTools/obj
+/WebTools/Properties/PublishProfiles
+/WebTools/src/**/*.js

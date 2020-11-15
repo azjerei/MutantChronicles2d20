@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MUTANT CHRONICLES</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="res/css/appselection.css" rel="stylesheet" />
+    <link href="res/css/attributes.css" rel="stylesheet" />
+    <link href="res/css/characterSheet.css" rel="stylesheet" />
+    <link href="res/css/common.css" rel="stylesheet" />
+    <link href="res/css/components.css" rel="stylesheet" />
+    <link href="res/css/dialog.css" rel="stylesheet" />
+    <link href="res/css/skills.css" rel="stylesheet" />
+</head>
+<body class="page-background" onload="setupGuard();">
+    <div style="display:none;">
+        <script>
+		    <!--    //--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload(
+                "res/img/logo.png",
+                "res/img/bg.png"
+            )
+            //--><!]]>
+        </script>
+    </div>
+    <div class="content-container-fullscreen">
+        <center>
+            <a href="index.html"><img src="res/img/logo.png" class="logo" style="cursor:pointer;" /></a>
+            <b style="position:absolute;transform:translateY(22px);">BETA</b>
+        </center>
+    </div>
+    <div class="content-container">
+        <div class="content">
+            <div id="app"></div>
+            <br /><br /><br />
+        </div>
+    </div>
+    <div id="footer" class="footer"></div>
+    <div id="dialog"></div>
+
+    <script src="dist/mc.js"></script>
+    <script src="version.js"></script>
+
+    <script>
+        function setupGuard() {
+            if (window.history && history.pushState) {
+                history.pushState(null, null, null);
+                addEventListener('popstate', function () {
+                    var leave = confirm("Do you want to leave this page? This will cause your character to become devoured by the Dark Symmetry.");
+                    if (leave) {
+                        history.back();
+                    }
+                    else {
+                        history.pushState(null, null, null);
+                    }
+                });
+            }
+        }
+
+        document.getElementById("footer").innerText = version;
+    </script>
+</body>
+</html>

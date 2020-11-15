@@ -1,0 +1,58 @@
+﻿.skill-container,
+.skill-container-option {
+    width: 400px;
+    height: auto;
+}
+
+.skill-name {
+    font-size: large;
+    margin-bottom: 2px;
+    border-bottom: 1px solid rgba(128,128,128,.5);
+}
+
+.skill-expertise,
+.skill-focus {
+    font-size: small;
+    padding-left: 20px !important;
+}
+
+.skill-expertise-value,
+.skill-focus-value {
+    font-size: small;
+    text-align: center;
+    padding-right: 4px;
+}
+
+.skill-points {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 0px;
+    background-color: white;
+}
+
+.skill-inc-expertise,
+.skill-inc-focus {
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+#signature-skill {
+    width: 200px;
+}
+
+.legendary {
+    background-color: #0c3956;
+    color: white;
+    padding: 2px 4px 2px 4px;
+    float: right;
+}
+
+.signature {
+    background-color: #6a4e23;
+    color: white;
+    padding: 2px 5px 2px 5px;
+    float: right;
+    font-size: small;
+    width: 20px;
+    text-align: center;
+}
